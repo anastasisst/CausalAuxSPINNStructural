@@ -18,8 +18,7 @@ stack.
 ## Quick start
 
 Open any notebook and run all cells. Defaults are sized for a few-minute
-demo. Increase `EPOCHS` in the hyperparameter cell to reach paper-quality
-errors.
+demo.
 
 Dependencies: `jax` (CUDA), `flax`, `optax`, `numpy`, `matplotlib`,
 `tqdm`.
@@ -29,11 +28,18 @@ Dependencies: `jax` (CUDA), `flax`, `optax`, `numpy`, `matplotlib`,
 If you use this code, please cite:
 
 ```bibtex
-@article{TODO,
-  title   = {TODO},
-  author  = {TODO},
-  journal = {TODO},
-  year    = {TODO}
+@article{STAMOU2026115285,
+title = {A unified causality-enhanced separable physics-informed neural network for predicting beam and plate dynamics},
+journal = {Engineering Applications of Artificial Intelligence},
+volume = {181},
+pages = {115285},
+year = {2026},
+issn = {0952-1976},
+doi = {https://doi.org/10.1016/j.engappai.2026.115285},
+url = {https://www.sciencedirect.com/science/article/pii/S0952197626015691},
+author = {Anastasios Stamou and Taniya Kapoor and Michalis Fragiadakis},
+keywords = {Separable physics-informed neural networks, Causal training, Auxiliary variables, Structural dynamics, High-order partial differential equations, Inverse identification},
+abstract = {A thorough understanding of the dynamic behavior of structural elements, such as beams, plates, and membranes, is crucial for reliable structural analysis. This behavior is typically governed by higher-order partial differential equations (PDEs), which accurately capture their spatiotemporal response. However, the presence of high-order differential operators and inherent high-frequency components, especially over large spatial domains, poses challenges for Physics-Informed Neural Networks (PINNs). To tackle this challenge, we propose a causality-informed Separable Physics-Informed Neural Network (SPINN) framework augmented with auxiliary variables (Causal Aux SPINN) to enhance the performance of PINNs in structural engineering applications. The proposed framework integrates three key components. First, the SPINN formulation decomposes the spatiotemporal solution into low-rank components, allowing efficient representation of high-dimensional dynamic fields with reduced computational cost. Second, the causality-informed loss function re-weights the training objective to respect the temporal evolution of structural dynamics and mitigate error accumulation over time. Third, the auxiliary-variable formulation introduces additional outputs for second-order fields, such as curvature-related quantities, enabling accurate enforcement of fourth-order differential operators without relying solely on successive differentiation of displacement fields. The proposed “Causal Aux SPINN” algorithm is evaluated on both forward and inverse benchmarks in structural dynamics, including Euler–Bernoulli and Timoshenko beams, membranes, and Kirchhoff–Love plates. Across all benchmarks, the Causal Aux SPINN method consistently reduces error and improves robustness, while maintaining computational efficiency comparable to the Baseline SPINN formulation. Overall, coupling causal weighting with auxiliary-variable learning is shown to provide an effective framework for structural engineering applications.}
 }
 ```
 
